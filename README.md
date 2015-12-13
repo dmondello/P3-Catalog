@@ -16,7 +16,7 @@ A web based catalog application with OAUTH user control.
 - In vagrant/ directory, run *vagrant up*
 - Run *vagrant ssh*
 - Move to catalog directory: *cd /vagrant/catalog* 
-- Create database and default category with *python database_setup.py*
--- Add Team and Player *python moreteams.py* 
+- Create database and default category with *python db_setup.py*
+- Add Teams and Players *python moreteams.py* 
 - Run server with *python project.py*
 - Navigate to http://localhost:8000 in your browser
