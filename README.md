@@ -9,8 +9,6 @@ A web based catalog application with OAUTH user control.
 - Python 2.x
 - Flask (http://flask.pocoo.org/)
 - SQLAlchemy (http://www.sqlalchemy.org/)
-- Register app with both Google afor OAUTH ID and secrets
--- https://developers.google.com
 
 ##How to Run the Project
 - Install Vagrant
