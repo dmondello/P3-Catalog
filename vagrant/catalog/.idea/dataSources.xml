@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2929345096">
+    <data-source source="LOCAL" name="Sqlite (Xerial) - teams.db" uuid="ff485725-7ae7-442f-b251-b39d365efe04">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$USER_HOME$/Documents/Code/Python/fullstack-nanodegree-vm/vagrant/catalog/teams.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

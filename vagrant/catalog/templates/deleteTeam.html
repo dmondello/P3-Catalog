@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+    <div class="row">
+        <div class="content-button-header col-md-6">
+            <!-- link to private list of teams -->
+            <a href="{{url_for('showTeams')}}" class="btn btn-default btn-sm"> Teams </a>
+        </div>
+    </div>
+
+<h3><i>Delete Team</i></h3>
+<h4> Are you sure you want to delete {{team.name} and all players? </h4>
+
+<form action="#" method = 'post'>
+      <!-- hidden field against csrf attack-->
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+
+    <button type='submit'  class="btn btn-primary">Yes Delete it! </button>
+</form>
+
+</body>
+
+</html>

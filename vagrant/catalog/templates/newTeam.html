@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+    <div class="row">
+        <div class="content-button-header col-md-6">
+            <!-- link to private list of teams -->
+            <a href="{{url_for('showTeams')}}" class="btn btn-default btn-sm"> Teams </a>
+        </div>
+    </div>
+</div>
+
+        <h3><i>New Team</i></h3>
+
+        <form action="#" method = 'post' enctype=multipart/form-data>
+            <!-- hidden field against csrf attack-->
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="InputName">Name</label>
+                    <input name='name' type="text" size='10' class="form-control" id="InputName" placeholder="Name Team">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="InputFile">File input</label>
+                <input name="file" type="file" id="InputFile">
+            </div>
+
+            <p><button type="submit" class="btn btn-primary">Insert</button></p>
+        </form>
+{% include 'footer.html' %}
