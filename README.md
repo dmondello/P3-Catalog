@@ -13,7 +13,7 @@ A web based catalog application with OAUTH user control.
 ##How to Run the Project
 - Install Vagrant
 - Clone this repo
-- In vagrant/ directory, run *vagrant up*
+- In P3-Catalog/ directory, run *vagrant up*
 - Run *vagrant ssh*
 - Move to catalog directory: *cd /vagrant/catalog* 
 - Create database and default category with *python db_setup.py*
