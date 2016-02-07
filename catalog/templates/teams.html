@@ -1,0 +1,37 @@
+{% include 'header.html' %}
+    <div class="row">
+        <div class="content-button-header col-md-6">
+            <a href="{{url_for('newTeam')}}" class="btn btn-default btn-sm"> New Team </a>
+            <a href="{{url_for('teamsJSON')}}" class="btn btn-default btn-sm">Team Json</a>
+        </div>
+    </div>
+</div>
+
+	<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    <b>TEAMS </b>
+                </th>
+                <th class="text-center">
+                    <b>EDIT</b>
+                </th>
+                <th class="text-center">
+                    <b>DELETE</b>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- cycle to have list of teams -->
+            {% for team in teams %}
+
+            <tr>
+                <td align="left"> <b>{{session['user_id']}}</b> {{team.user_id}}  <a href = "{{url_for('showPlayers', team_id = team.id)}}"><b><img src="static/img/upload/{{team.logo}}" alt="{{team.name}}" height="42" width="42"> {{team.name}}</b></a></td>
+                <td align="center"><a href = "{{url_for('editTeam',team_id = team.id)}}"><button type="button"  class="btn btn-default glyphicon glyphicon-pencil"></button></a></td>
+                <td align="center"><a href = "{{url_for('deleteTeam',team_id = team.id)}}"><button type="button" class="btn btn-default glyphicon glyphicon-trash" ></button></a></td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+	</table>
+{% include 'footer.html' %}

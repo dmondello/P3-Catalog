@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+    <div class="row">
+        <div class="content-button-header col-md-6">
+        <a href="{{url_for('showTeams')}}" class="btn btn-default btn-sm"> Teams </a>
+		<a href="{{url_for('showPlayers',team_id=team_id )}}" class="btn btn-default btn-sm"> Back to Team </a>
+        </div>
+    </div>
+
+<h1> Edit Player: {{player.name }} {{player.surname}} </h1>
+
+<form action="#" method = 'post'  method = 'post' enctype=multipart/form-data>
+<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+	 <div class="form-group">
+        <label for="InputName">Name:</label>
+        <input name='name' type="text" size='30' class="form-control" id="InputName" placeholder = '{{player.name }}'>
+    </div>
+
+     <div class="form-group">
+        <label for="InputName">Surname:</label>
+        <input name='surname' type="text" size='30' class="form-control" id="InputSurame" placeholder = '{{player.surname }}'>
+    </div>
+
+    <div class="form-group">
+        <label for="InputName">Role:</label>
+        <input name='role' type="text" size='30' class="form-control" id="InputRole" placeholder = '{{player.role }}'>
+    </div>
+
+
+	<div class="form-group">
+		<label for="Image">Player Picture:</label>
+		<input name="file" type="file" id="Image">
+	</div>
+
+    <p><button type="submit" value='Modify' class="btn btn-primary">Modify!</button></p>
+
+</form>
+</body>
+</html>
