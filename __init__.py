@@ -30,7 +30,7 @@ CLIENT_ID = json.loads(
 
 
 # Import content from database
-from catalog.db_setup import Base, User, Team, Player
+from db_setup import Base, User, Team, Player
 
 # Create Flask web application
 app = Flask(__name__)
