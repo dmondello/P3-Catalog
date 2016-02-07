@@ -30,10 +30,11 @@ CLIENT_ID = json.loads(
 
 
 # Import content from database
-from db_setup import Base, User, Team, Player
+from catalog.db_setup import Base, User, Team, Player
 
 # Create Flask web application
 app = Flask(__name__)
+
 
 # SeaSurf, Flask extention to prevent cross-site request forgeries
 csrf = SeaSurf(app)
